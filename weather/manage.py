@@ -10,6 +10,7 @@ def configure():
 
 def main():
     """Run administrative tasks."""
+    configure()
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'weather.settings')
     try:
         from django.core.management import execute_from_command_line
