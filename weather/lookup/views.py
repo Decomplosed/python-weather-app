@@ -10,7 +10,6 @@ def home(request):
         api_request = requests.get(f"https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode={zipcode}&distance=25&API_KEY={os.getenv('API_KEY')}")
         try:
             api = json.loads(api_request.content)
-            print(api)
         except Exception as e:
             api = "Error..."
 
